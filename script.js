@@ -20,16 +20,20 @@ function initializeWebSocket(name) {
   
     if (message.includes('__end__')) {
       message = message.replace('__end__', '');
+      botMessageBuffer += message;
+      appendMessage('🤖 Bot', botMessageBuffer.trim());
+      botMessageBuffer = '';
+      clearTimeout(botTimeout); // Dừng timeout đang chờ
+      return;
     }
   
     botMessageBuffer += message;
   
     clearTimeout(botTimeout);
-  
     botTimeout = setTimeout(() => {
       appendMessage('🤖 Bot', botMessageBuffer.trim());
-      botMessageBuffer = ''; 
-    }, 300);
+      botMessageBuffer = '';
+    }, 600);
   };
   
   socket.onerror = function(error) {
@@ -58,7 +62,6 @@ function sendMessage() {
 
 function appendMessage(sender, text) {
     const p = document.createElement('p');
-    // Xác định class dựa trên sender
     const isUser = sender.includes('You');
     p.classList.add('chat-message', isUser ? 'user' : 'bot');
     p.innerHTML = `<strong>${sender}:</strong> ${text}`;

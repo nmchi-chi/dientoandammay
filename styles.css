@@ -18,7 +18,7 @@ body {
 }
 
 .tab.active {
-  background: #007bff;
+  background: #438d68;
 }
 
 .content {
@@ -52,14 +52,14 @@ body {
 .chat-input button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #83c088;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .chat-input button:hover {
-  background-color: #0056b3;
+  background-color: #94daaf;
 }
 
 table {
@@ -92,7 +92,7 @@ button {
   transition: background-color 0.3s;
 }
 .upload-btn:hover {
-  background-color: #89b4dd;
+  background-color: #addfbd;
 }
 
 /* Bảng Docs Info */
@@ -138,11 +138,11 @@ button {
   justify-content: flex-end;
   background-color: #f9f9f9;
   border-radius: 15px;
-  padding: 30px 30px 15px 30px; 
+  padding: 10px 15px 15px 15px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 80%; 
-  max-width: 700px; 
-  height: 70vh; 
+  width: 95%; 
+  max-width: none; 
+  height: 85vh; 
   position: fixed; 
   top: 50%; 
   left: 50%; 
@@ -168,7 +168,7 @@ button {
   border-radius: 20px;
   padding: 12px 20px;
   max-width: 70%;
-  font-size: 15px;
+  font-size: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 5px;  
   position: relative;
@@ -182,7 +182,7 @@ button {
   border-radius: 20px;
   padding: 12px 20px;
   max-width: 70%;
-  font-size: 15px;
+  font-size: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 5px;  /* Viền dưới bên trái tròn hơn */
   position: relative;
@@ -201,7 +201,7 @@ button {
   padding: 12px 18px;
   border: 2px solid #ccc;
   border-radius: 25px;
-  font-size: 15px;
+  font-size: 25px;
   outline: none;
   transition: border 0.3s ease;
 }
