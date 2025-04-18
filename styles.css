@@ -1,0 +1,253 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+}
+
+.tabs {
+  display: flex;
+  background: #333;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #007bff;
+}
+
+.content {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.chat-window {
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: white;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Nút Upload */
+.upload-btn {
+  background-color: #a7c7e7;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+.upload-btn:hover {
+  background-color: #89b4dd;
+}
+
+/* Bảng Docs Info */
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #bcdff1;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+}
+
+.styled-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Nút Xóa */
+.delete-btn {
+  background-color: #f28b82;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #e57373;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px 30px 15px 30px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%; 
+  max-width: 700px; 
+  height: 70vh; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #0088cc;
+  color: white;
+  border-radius: 20px;
+  padding: 12px 20px;
+  max-width: 70%;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 5px;  
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 20px;
+  padding: 12px 20px;
+  max-width: 70%;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;  /* Viền dưới bên trái tròn hơn */
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#chatInput {
+  width: 80%;
+  padding: 12px 18px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#chatInput:focus {
+  border-color: #0088cc;
+}
+
+button {
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+
+button:hover {
+  background-color: #006fa1;
+}
+
+.chat-message {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@media (max-width: 768px) {
+  .chat-box {
+    width: 90%;
+    height: 60vh;
+  }
+  
+  #chatInput {
+    width: 70%;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
